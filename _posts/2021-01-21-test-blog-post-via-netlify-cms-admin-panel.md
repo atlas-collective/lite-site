@@ -6,3 +6,7 @@ author: Jimbo
 hero: /assets/uploads/honda-cb250-nighthawk-scrambler.jpg
 ---
 This is a test of the Blog Post creation function via Netlify CMS admin panel.
+
+
+
+*Pretty slick tbh.*
