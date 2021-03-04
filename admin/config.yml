@@ -85,7 +85,8 @@ collections:
           - {label: phone_secondary, name: phone_secondary, widget: string, hint: "(813) 765-4321"}
           - {label: fax, name: fax, widget: string, hint: "(813) 666-6666"}
           - {label: email_primary, name: email_primary, widget: string, pattern: ['([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}', "Must be an email address"]}
-          - {label: google_maps_api_key, name: google_maps_api_key, widget: string, hint: "Used to display embeded maps"}
+          - {label: "Legal Text", name: legal_text, widget: string, hint: "Legal text at the bottom of the site"}
+          - {label: "Legal Image", name: legal_image, widget: image, hint: "EHO image by legal footer"}
       - label: "Social Media"
         name: "social"
         file: "_data/social_media.yml"

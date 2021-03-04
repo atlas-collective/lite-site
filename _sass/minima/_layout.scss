@@ -108,6 +108,11 @@
 .site-footer {
   border-top: 10px solid #2d2d2d;
   padding: $spacing-unit 0;
+  .legal {
+    max-width: 1640px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer-heading {
