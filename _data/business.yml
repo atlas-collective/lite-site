@@ -6,4 +6,10 @@ phone_primay: 512-000-0000
 phone_secondary: 512-000-000
 fax: 512-000-000
 email_primary: test@example.com
+legal_text: Photos are images only and should not be relied upon to confirm
+  applicable features. The Brick & Mortar District at Plum Creek reserves the
+  right to make changes or modifications to homes, floor plans, elevations,
+  specifications, materials, and prices without notice. &copy;2021 | All Rights
+  Reserved.
+legal_image: /assets/uploads/eho.png
 google_maps_api_key: none
