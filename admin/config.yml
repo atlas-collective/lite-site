@@ -10,17 +10,17 @@ collections:
   - name: "home"
     label: "Home Page"
     files: 
-      - label: "hero_image"
+      - label: "Top Hero Image"
         name: "hero_image"
         file: "_data/hero_image.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "hero_image" }
-      - label: "more_to_the_mix"
+      - label: "More To The Mix"
         name: "more_to_the_mix"
         file: "_data/more_to_the_mix.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "more_to_the_mix" }
-      - label: "hang_your_hats_here"
+      - label: "Hang Your Hats Here"
         name: "hang_your_hats_here"
         file: "_data/hang_your_hats_here.yml"
         fields:
