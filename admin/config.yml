@@ -8,7 +8,7 @@ logo_url: 'https://cdn.shopify.com/s/files/1/1375/4313/files/atlas-logo-simple.p
 publish_mode: editorial_workflow
 collections:
   - name: "home"
-    label: "Home Page"
+    label: "Home Page Content Sections"
     files: 
       - label: "Top Hero Image"
         name: "hero_image"
