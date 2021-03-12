@@ -54,11 +54,24 @@ collections:
         file: "_data/site_renderings.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "site_renderings" }
-      - label: "the_people_behind"
+      - label: "The People Behind The Place"
         name: "the_people_behind"
         file: "_data/the_people_behind.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "the_people_behind" }
+          - { label: "Column 1 Title", name: "c1t", widget: "string"}
+          - { label: "Column 1 Description", name: "c1d", widget: "text"}
+          - { label: "Column 1 Link", name: "c1", widget: "string"}
+          - { label: "Column 2 Title", name: "c2t", widget: "string"}
+          - { label: "Column 2 Description", name: "c2d", widget: "text"}
+          - { label: "Column 2 Link", name: "c2l", widget: "string"}
+          - { label: "Column 3 Title", name: "c3t", widget: "string"}
+          - { label: "Column 3 Description", name: "c3d", widget: "text"}
+          - { label: "Column 3 Link", name: "c3l", widget: "string"}
+          - { label: "Column 4 Title", name: "c4t", widget: "string"}
+          - { label: "Column 4 Description", name: "c4d", widget: "text"}
+          - { label: "Column 4 Link", name: "c4l", widget: "string"}
+
       - label: "now_happening"
         name: "now_happening"
         file: "_data/now_happening.yml"
