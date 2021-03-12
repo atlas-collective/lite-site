@@ -25,12 +25,13 @@ layout: home
 
 <!-- DESTINED FOR DESTIONATION -->
 {{ site.data.destined_for_destionation.name }}
-
+<hr class="spacer">
 <!-- RENDERINGS -->
-{{ site.data.site_renderings.name }}
+{%- include home-site_rendering.html -%}
+
+<hr class="spacer">
 
 <!-- THE PEOPLE BEHIND THE PLACE -->
-{{ site.data.the_people_behind.name }}
 {%- include home-the_people.html -%}
 
 <hr class="spacer">

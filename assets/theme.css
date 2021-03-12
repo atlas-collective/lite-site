@@ -1,5 +1,5 @@
 body {
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 h2 {
 	font-family: Neuzon;
@@ -23,6 +23,51 @@ h2 {
 	margin-bottom: 100px;
 	opacity: 0;
 }
+/* The people behind section */
+.whos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.who {
+	padding: 20px 20px 50px 20px;
+	position: relative;
+}
+.who:not(:last-of-type) {
+    border-right-style: dotted;
+    border-right-width: 5px;
+}
+.icon-space {
+    min-height: 120px;
+}
+.the-people h2 {
+	color: #2F3634;
+	font-size: 4.3rem;
+	text-align: center;
+}
+.whos h3 {
+	color: #881719;
+	font-size: 1.8rem;
+	font-family: Forma DJR Display;
+	text-transform: uppercase;
+}
+.whos p {
+	font-family: Forma DJR Micro;
+	color: color: #881719;
+	font-size: 22px;
+	line-height: 1.9;
+}
+.whos a {
+	background-color: #881719;
+	color: #E5E3DD;
+	font-family: Forma DJR Display;
+	padding: 10px 30px;
+	font-size: 24px;
+	letter-spacing: 1px;
+	border-radius: 25px;
+	position: absolute;
+	bottom: 0;
+}
+
 /* news section */
 .news {
     display: flex;
@@ -109,4 +154,13 @@ ul.footer-links li {
     display: flex;
     justify-content: space-between;
     padding: 15px;
+}
+.legal {
+	font-family: Forma DJR Micro;
+	font-size: 11px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 20px;
+
 }
