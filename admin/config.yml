@@ -34,6 +34,12 @@ collections:
         file: "_data/life_with_benefits.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "life_with_benefits" }
+      - label: "Corner Rendering / Image Row "
+        name: "corner_renderings"
+        file: "_data/corner_renderings.yml"
+        fields:
+          - { label: name, name: name, widget: string, hint: "corner_renderings" }
+          - { label: "Corner Rendering / Image", name: corner_rendering, widget: image, hint: "Corner Rendering Image"}
       - label: "businesses_welcome"
         name: "businesses_welcome"
         file: "_data/businesses_welcome.yml"
