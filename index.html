@@ -31,12 +31,26 @@ layout: home
 
 <!-- THE PEOPLE BEHIND THE PLACE -->
 {{ site.data.the_people_behind.name }}
+{%- include home-the_people.html -%}
+
+<hr class="spacer">
 
 <!-- NOW HAPPENING -->
-{{ site.data.now_happening.name }}
+{%- include home-news.html -%}
+
+<hr class="spacer">
 
 <!-- BRICK & MORTAR INTEREST LIST -->
 {{ site.data.interest_list.name }}
 
-<!-- FOOTER HERO -->
-{{ site.data.footer_hero.name }}
+<div>
+	<h5 style="text-align: center; padding-top: 200px;padding-bottom: 200px;">PLACEHOLDER INTEREST FORM</h5>
+
+	<div class="divbar red push" style="background-image:url('{{ 'assets/branding/redbar.png' | relative_url }}')">
+	</div>
+</div>
+
+<hr class="spacer">
+
+{%- include home-hero_footer.html -%}
+
