@@ -49,7 +49,7 @@ collections:
         file: "_data/destined_for_destionation.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "destined_for_destionation" }
-      - label: "site_renderings"
+      - label: "Site Rendering / Image Row "
         name: "site_renderings"
         file: "_data/site_renderings.yml"
         fields:
