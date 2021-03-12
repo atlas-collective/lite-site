@@ -4,9 +4,28 @@ body {
 h2 {
 	font-family: Neuzon;
 }
-
+#topanchor {
+	height: 1px;
+	background-color: black;
+}
 .site-header {
 	background-color: #F5F5F5;
+	border-top: 20px solid black;
+	border-bottom: 0;
+	min-height: 100px;
+	position: sticky;
+	top: -60px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0px 0px 6px 0px rgb(201 201 201);
+}
+.site-header .site-header-inner {
+	height: 60px;
+	position: sticky;
+	top: 0px;
+	margin: 0;
 }
 
 .page-width {
@@ -27,6 +46,13 @@ h2 {
 	margin-bottom: 100px;
 	opacity: 0;
 }
+/* corner rendering image row */
+#corner_rendering {
+	width: 100%;
+	height: auto;
+}
+
+
 /* site rendering image row */
 #site_rendering {
 	width: 100%;
@@ -40,6 +66,15 @@ h2 {
 .who {
 	padding: 20px 20px 50px 20px;
 	position: relative;
+}
+@media only screen and (max-width: 750px) {
+	.whos {
+		grid-template-columns: 1fr 1fr;
+	}
+	.who:nth-of-type(1) {
+	    border-right-style: dotted;
+	    border-right-width: 5px;
+	}
 }
 .who:not(:last-of-type) {
     border-right-style: dotted;
@@ -87,6 +122,7 @@ h2 {
     background-size: cover;
     background-position: center center;
     position: relative;
+    overflow-x: hidden;
 }
 #lightning {
     z-index: 1;
