@@ -3,6 +3,8 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+local_backend: 
+  url: http://localhost:8082/api/v1
 media_folder: 'assets/uploads'
 logo_url: 'https://cdn.shopify.com/s/files/1/1375/4313/files/atlas-logo-simple.png?v=1480492227'
 publish_mode: editorial_workflow
@@ -15,6 +17,8 @@ collections:
         file: "_data/hero_image.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "hero_image" }
+          - { label: "Hero Image", name: hero_image, widget: image, hint: "Hero Image Background"}
+          - { label: "Hero Image Alt Text", name: hero_image_alt, widget: string, hint: "Hero Image Alt Text" }
       - label: "More To The Mix"
         name: "more_to_the_mix"
         file: "_data/more_to_the_mix.yml"
