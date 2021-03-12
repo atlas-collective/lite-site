@@ -5,6 +5,10 @@ h2 {
 	font-family: Neuzon;
 }
 
+.site-header {
+	background-color: #F5F5F5;
+}
+
 .page-width {
   max-width: 1600px;
   margin-left: auto;
