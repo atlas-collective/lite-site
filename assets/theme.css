@@ -12,6 +12,9 @@ p {
 .fc-white {
 	color: white;
 }
+.fc-dark {
+	color: #304251;
+}
 /* font-family helpers */
 .ff-neu {
 	font-family: Neuzon;
