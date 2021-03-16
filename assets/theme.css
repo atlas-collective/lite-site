@@ -22,6 +22,9 @@ p {
 .ff-display {
 	font-family: Forma DJR Display;
 }
+.ff-akro {
+	font-family: Akrobat, Helvetica;
+}
 
 #topanchor {
 	height: 1px;
@@ -64,11 +67,6 @@ p {
 	}
 }
 
-.spacer {
-	margin-top: 100px;
-	margin-bottom: 100px;
-	opacity: 0;
-}
 .sized_section {
 	position: relative;
 	background-size: 100% auto;
@@ -228,7 +226,7 @@ img#footer_hero {
 img#dev_logos {
     height: auto;
 }
-.links {
+.flinks {
     display: flex;
     flex-direction: column;
     justify-content: center;

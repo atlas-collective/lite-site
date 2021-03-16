@@ -13,9 +13,12 @@ layout: home
 <!-- MORE TO THE MIX -->
 {%- include home-more_to_the_mix.html -%}
 
+<hr class="spacer">
+
 <!-- THE INTERSECTION OF CHARM AND CONNECTION -->
 {%- include home-charm.html -%}
 
+<hr class="spacer">
 
 <!-- HANGE YOUR HATS HERE -->
 {%- include home-hats.html -%}
@@ -23,10 +26,14 @@ layout: home
 <hr class="spacer">
 
 <!-- LIFE WITH BENEFITS -->
-{{ site.data.life_with_benefits.name }}
+{%- include home-benefits.html -%}
+
+<hr class="spacer">
 
 <!-- BUSINESSES WELCOME -->
 {{ site.data.businesses_welcome.name }}
+
+<hr class="spacer">
 
 {%- include home-corner_rendering.html -%}
 

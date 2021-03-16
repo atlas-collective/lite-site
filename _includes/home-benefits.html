@@ -1,0 +1,22 @@
+{{ site.data.life_with_benefits.name }}
+
+<div class="sized_section vcen benefits-bg" style="">
+	<div class="grid12">
+		<article class="benefits-content fc-white page-width">
+			<div class="">
+				<h2 class="fs-large fup fc-dark">{{ site.data.life_with_benefits.title }}</h2>
+				<p class="ff-micro fs-body fc-dark">{{ site.data.life_with_benefits.bodytop }}
+				</p>
+				<ul class="ff-micro fs-body fc-dark">
+					{% for item in site.data.life_with_benefits.amenities %}
+					<li> {{ item.name }}</li>
+					{% endfor %}
+				</ul>
+				<p class="ff-micro fs-body">{{ site.data.life_with_benefits.bodybottom }}
+				</p>
+				
+			</div>
+		</article>
+	</div>
+	
+</div>

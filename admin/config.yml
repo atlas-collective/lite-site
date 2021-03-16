@@ -46,6 +46,14 @@ collections:
         file: "_data/life_with_benefits.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "life_with_benefits" }
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Long text - Top", name: "bodytop", widget: "text"}
+          - label: "Amenities"
+            name:  amenities
+            widget: list
+            fields: 
+              - {label: Name, name: name, widget: string}
+          - { label: "Long text - Bottom", name: "bodybottom", widget: "text"}
       - label: "Corner Rendering / Image Row "
         name: "corner_renderings"
         file: "_data/corner_renderings.yml"

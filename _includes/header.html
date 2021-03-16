@@ -2,16 +2,18 @@
 <div id="topanchor"></div>
 <header class="site-header" role="banner">
   <div class="site-header-inner page-width">
-    <div class="logo">
-      <img id="logoscrolled" style="display:none;" src="{{ 'assets/branding/logomobile.png' | relative_url }}">
-      <img id="logomain" src="{{ 'assets/branding/BMDlogo.png' | relative_url }}">
+    <div class="logowrap">
+      <div class="logo">
+        <img id="logoscrolled" src="{{ 'assets/branding/logomobile.png' | relative_url }}">
+        <img id="logomain" src="{{ 'assets/branding/BMDlogo.png' | relative_url }}">
+      </div>
     </div>
-    <div class="links">
+    <div class="tlinks">
       <nav>
         <ul>
           {% for item in site.data.top_navigation.top_navigation %}
             <li>
-              <a href="{{ item.link }}">{{ item.name }}</a>
+              <a class="ff-akro fup" href="{{ item.link }}">{{ item.name }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -19,7 +21,7 @@
       
     </div>
     <div class="nav-cta">
-      <a id="topcta" href="{{site.data.top_navigation.ctalink}}">
+      <a id="topcta" class="ff-display" href="{{site.data.top_navigation.ctalink}}">
         {{site.data.top_navigation.ctatext}}
       </a>
     </div>
