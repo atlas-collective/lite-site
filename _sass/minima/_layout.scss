@@ -1,5 +1,14 @@
-@mixin for-mobi-only {
-  @media only screen and (max-width: 750px) { @content; }
+@mixin for-small {
+  @media only screen and (max-width: 749px) { @content; }
+}
+@mixin for-med {
+  @media only screen and (min-width: 750px) and (max-width: 1440px) { @content; }
+}
+@mixin for-med-up {
+  @media only screen and (min-width: 750px) { @content; }
+}
+@mixin for-large {
+  @media only screen and (min-width: 1441px) { @content; }
 }
 // @mixin for-tab-up {
 //   @media (min-width: 560px) { @content; }
@@ -20,17 +29,37 @@
 /**
  * Site header
  */
-
-.f-large {
-  font-size: 68px;
-  line-height: 58px;
-  @include for-mobi-only {
+// font-size helpers
+.fs-large {
+  @include for-large {
+    font-size: 68px;
+    line-height: 58px;
+  }
+  @include for-med {
     font-size: 44px;
     line-height: 40px;
   }
+  @include for-small {
+    font-size: 28px;
+    line-height: 14px;
+  }
+}
+.fs-body {
+  @include for-large {
+    font-size: 24px;
+    line-height: 48px;
+  }
+  @include for-med {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  @include for-small {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }
 
-
+//  DEFAULTS FROM MINIMA
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;

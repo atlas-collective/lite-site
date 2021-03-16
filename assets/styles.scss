@@ -1,0 +1,40 @@
+---
+# Adding yaml for scss compilation
+---
+
+@mixin for-small {
+  @media only screen and (max-width: 749px) { @content; }
+}
+@mixin for-med {
+  @media only screen and (min-width: 750px) and (max-width: 1440px) { @content; }
+}
+@mixin for-med-up {
+  @media only screen and (min-width: 750px) { @content; }
+}
+@mixin for-large {
+  @media only screen and (min-width: 1441px) { @content; }
+}
+
+// INDIVIDUAL HOMEPAGE SECTION LAYOUTS
+
+/* More to the Mix */
+.mm-bg {
+  @include for-small {
+    background-image:url('{{ 'assets/home/moremixmobile.png' | relative_url }}');
+  }
+  @include for-med-up {
+    min-height: 67vw; 
+    height: 67vw;
+    background-image:url('{{ 'assets/home/moremix.png' | relative_url }}');
+  }
+  
+}
+.mm-content {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  @include for-med-up {
+    grid-column-start: 2;
+    grid-column-end: 7;
+  }
+  
+}
