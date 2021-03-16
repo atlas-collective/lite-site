@@ -51,7 +51,7 @@ collections:
             name:  amenities
             widget: list
             fields: 
-              - {label: Amentity, name: amenity, widget: string}
+              - {label: Name, name: name, widget: string}
           - { label: "Long text - Bottom", name: "bodybottom", widget: "text"}
       - label: "Corner Rendering / Image Row "
         name: "corner_renderings"

@@ -6,21 +6,21 @@ bodytop: "The phrase **the more the merrier** applies to places, too. The
   life merrier. Among many others, Brick & Mortar District’s proposed amenities
   include:"
 amenities:
-  - amenity: Community Clubhouse
-  - amenity: Two Swimming Pools
-  - amenity: Fitness / Wellness Center
-  - amenity: Heroes Memorial
-  - amenity: Outdoor BBQs
-  - amenity: Co-Working
-  - amenity: Cabana
-  - amenity: Rooftop Bar
-  - amenity: Dog Wash
-  - amenity: Yoga
-  - amenity: Sun deck
-  - amenity: Outdoor Fireplaces
-  - amenity: Vegetable Garden
-  - amenity: Cornhole & Bocce
-  - amenity: Mail & Parcel
+  - name: Community Clubhouse
+  - name: Two Swimming Pools
+  - name: Fitness / Wellness Center
+  - name: Heroes Memorial
+  - name: Outdoor BBQs
+  - name: Co-Working
+  - name: Cabana
+  - name: Rooftop Bar
+  - name: Dog Wash
+  - name: Yoga
+  - name: Sun deck
+  - name: Outdoor Fireplaces
+  - name: Vegetable Garden
+  - name: Cornhole & Bocce
+  - name: Mail & Parcel
 bodybottom: "Oh, and one other must-see attraction: Residents and non-residents
   alike will be in for a real treat with the terrific park across the street. It
   will have interactive water features, a playground, large outdoor market, dog
