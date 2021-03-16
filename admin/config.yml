@@ -37,6 +37,10 @@ collections:
         file: "_data/hang_your_hats_here.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "hang_your_hats_here" }
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Long text", name: "body", widget: "text"}
+          - { label: "Button Text", name: "btext", widget: "string"}
+          - { label: "Button Link", name: "burl", widget: "string"}
       - label: "life_with_benefits"
         name: "life_with_benefits"
         file: "_data/life_with_benefits.yml"

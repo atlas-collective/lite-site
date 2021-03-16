@@ -3,13 +3,13 @@
 ---
 
 @mixin for-small {
-  @media only screen and (max-width: 749px) { @content; }
+  @media only screen and (max-width: 999px) { @content; }
 }
 @mixin for-med {
-  @media only screen and (min-width: 750px) and (max-width: 1440px) { @content; }
+  @media only screen and (min-width: 1000px) and (max-width: 1440px) { @content; }
 }
 @mixin for-med-up {
-  @media only screen and (min-width: 750px) { @content; }
+  @media only screen and (min-width: 1000px) { @content; }
 }
 @mixin for-large {
   @media only screen and (min-width: 1441px) { @content; }
@@ -55,6 +55,29 @@
   @include for-med-up {
     grid-column-start: 3;
     grid-column-end: 8;
+  }
+  
+}
+
+// hats
+// charm
+.hats-bg {
+  @include for-small {
+    background-image:url('{{ 'assets/home/hatsmmobile.png' | relative_url }}');
+  }
+  @include for-med-up {
+    min-height: 57vw; 
+    height: 57vw;
+    background-image:url('{{ 'assets/home/hats.png' | relative_url }}');
+  }
+}
+.hats-content {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  @include for-med-up {
+    padding-left: 30px;
+    grid-column-start: 1;
+    grid-column-end: 7;
   }
   
 }
