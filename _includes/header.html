@@ -3,14 +3,20 @@
 <header class="site-header" role="banner">
   <div class="site-header-inner page-width">
     <div class="logo">
-      <img id="logomobile" src="{{ 'assets/branding/logomobile.png' | relative_url }}">
+      <img id="logoscrolled" style="display:none;" src="{{ 'assets/branding/logomobile.png' | relative_url }}">
       <img id="logomain" src="{{ 'assets/branding/BMDlogo.png' | relative_url }}">
     </div>
     <div class="links">
-      {{ site.data.top_navigation }}
-      {% for item in site.data.top_navigation.top_navigation %}
-        {{ item }}
-      {% endfor %}
+      <nav>
+        <ul>
+          {% for item in site.data.top_navigation.top_navigation %}
+            <li>
+              <a href="{{ item.link }}">{{ item.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      
     </div>
     <div class="nav-cta">
       <a id="topcta" href="{{site.data.top_navigation.ctalink}}">
