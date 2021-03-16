@@ -26,11 +26,10 @@ collections:
           - { label: name, name: name, widget: string, hint: "more_to_the_mix" }
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Long text", name: "body", widget: "text"}
-      - label: "the_intersection"
+      - label: "The Intersection of Charm"
         name: "the_intersection"
         file: "_data/the_intersection.yml"
         fields:
-          - { label: name, name: name, widget: string, hint: "the_intersection" }
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Long text", name: "body", widget: "text"}
       - label: "Hang Your Hats Here"
