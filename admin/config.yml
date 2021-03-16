@@ -118,6 +118,18 @@ collections:
           - {label: email_primary, name: email_primary, widget: string, pattern: ['([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}', "Must be an email address"]}
           - {label: "Legal Text", name: legal_text, widget: string, hint: "Legal text at the bottom of the site"}
           - {label: "Legal Image", name: legal_image, widget: image, hint: "EHO image by legal footer"}
+      
+      - label: "Header Navigation"
+        name:  "navigation"
+        file: "_data/top_navigation.yml"
+        fields:
+          - label: "Top Navigation"
+            name:  top_navigation
+            widget: list
+            fields: 
+              - {label: Name, name: name, widget: string}
+              - {label: Link, name: link, widget: string}
+
       - label: "Social Media"
         name: "social"
         file: "_data/social_media.yml"
