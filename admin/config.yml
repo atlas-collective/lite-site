@@ -24,6 +24,8 @@ collections:
         file: "_data/more_to_the_mix.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "more_to_the_mix" }
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Long text", name: "body", widget: "text"}
       - label: "Hang Your Hats Here"
         name: "hang_your_hats_here"
         file: "_data/hang_your_hats_here.yml"
