@@ -123,6 +123,12 @@ collections:
         name:  "navigation"
         file: "_data/top_navigation.yml"
         fields:
+          - label: "CTA Text"
+            name: ctatext
+            widget: string
+          - label: "CTA Link"
+            name: ctalink
+            widget: string
           - label: "Top Navigation"
             name:  top_navigation
             widget: list
