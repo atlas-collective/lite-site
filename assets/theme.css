@@ -4,6 +4,23 @@ body {
 h2 {
 	font-family: Neuzon;
 }
+p {
+	white-space: break-spaces;
+}
+/* css helpers */
+.text-white {
+	color: white;
+}
+.f-neu {
+	font-family: Neuzon;
+}
+.f-micro {
+	font-family: Forma DJR Micro;
+}
+.f-display {
+	font-family: Forma DJR Display;
+}
+
 #topanchor {
 	height: 1px;
 	background-color: black;
@@ -48,6 +65,31 @@ h2 {
 	margin-bottom: 100px;
 	opacity: 0;
 }
+.sized_section {
+	position: relative;
+	background-size: 100% auto;
+}
+.sizer_image {
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	pointer-events: none;
+	user-select: none;
+}
+.sized-inner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.sized-inner.vcen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
 .hero_image {
 	width: 100%;
@@ -58,6 +100,15 @@ h2 {
 }
 .hero_image > img {
 	opacity: 0;
+}
+
+/* More to the Mix */
+.ts-left {
+	max-width: 60%;
+	width: 50%;
+}
+.ts-right {
+	width: 40%;
 }
 
 /* corner rendering image row */

@@ -1,10 +1,14 @@
-{{ site.data.more_to_the_mix.name }}
-<div class="text_section left" style="background-image:url('{{ 'assets/branding/moremix.png' | relative_url }}')">
-	<article class="left">
-		<h2>{{ site.data.more_to_the_mix.title }}</h2>
-		<p>
-			{{ site.data.more_to_the_mix.body }}
-		</p>
-	</article>
-	<div class="right"></div>
+<div class="sized_section" style="background-image:url('{{ 'assets/branding/moremix.png' | relative_url }}')">
+	<img class="sizer_image" src="{{ 'assets/branding/moremix.png' | relative_url }}" alt="">
+	<div class="sized-inner vcen">
+		<article class="text-section text-white page-width">
+			<div class="ts-left">
+				<h2 class="f-large">{{ site.data.more_to_the_mix.title }}</h2>
+				<p class="f-micro">{{ site.data.more_to_the_mix.body }}
+				</p>
+			</div>
+			<div class="ts-right"></div>
+		</article>
+	</div>
+	
 </div>
