@@ -17,7 +17,7 @@
 
 // INDIVIDUAL HOMEPAGE SECTION LAYOUTS
 
-/* More to the Mix */
+// More to the Mix 
 .mm-bg {
   @include for-small {
     background-image:url('{{ 'assets/home/moremixmobile.png' | relative_url }}');
@@ -34,7 +34,27 @@
   grid-column-end: 13;
   @include for-med-up {
     grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column-end: 8;
+  }
+  
+}
+// charm
+.charm-bg {
+  @include for-small {
+    background-image:url('{{ 'assets/home/charmmobile.png' | relative_url }}');
+  }
+  @include for-med-up {
+    min-height: 55vw; 
+    height: 55vw;
+    background-image:url('{{ 'assets/home/charm.png' | relative_url }}');
+  }
+}
+.charm-content {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  @include for-med-up {
+    grid-column-start: 3;
+    grid-column-end: 8;
   }
   
 }

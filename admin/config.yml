@@ -52,6 +52,8 @@ collections:
         file: "_data/the_intersection.yml"
         fields:
           - { label: name, name: name, widget: string, hint: "the_intersection" }
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Long text", name: "body", widget: "text"}
       - label: "destined_for_destionation"
         name: "destined_for_destionation"
         file: "_data/destined_for_destionation.yml"
