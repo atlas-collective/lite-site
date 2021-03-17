@@ -93,12 +93,62 @@
     background-position: left center;
     background-repeat: no-repeat;
   }
+  position: relative;
+  .behind {
+    font-family: HWT American;
+    position: absolute;
+    bottom: -80px;
+    left: -30px;
+    font-size: 22rem;
+    opacity: .2;
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 .benefits-content {
+  position: relative;
   grid-column-start: 1;
   grid-column-end: 13;
   @include for-med-up {
     grid-column-start: 6;
+    grid-column-end: 13;
+  }
+  .amenities {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex-basis: 33%;
+    }
+  }
+}
+
+
+//interest form
+.interest-bg {
+  @include for-small {
+    //background-image:url('{{ 'assets/home/hatsmmobile.png' | relative_url }}');
+  }
+  @include for-med-up {
+    min-height: 57vw; 
+    height: 57vw;
+    //background-image:url('{{ 'assets/home/hats.png' | relative_url }}');
+  }
+}
+.interest-content {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  @include for-med-up {
+    grid-column-start: 3;
+    grid-column-end: 9;
+  }
+}
+.interest-form {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  @include for-med-up {
+    grid-column-start: 9;
     grid-column-end: 13;
   }
 }

@@ -30,12 +30,13 @@ layout: home
 
 <hr class="spacer">
 
-<!-- BUSINESSES WELCOME -->
-{{ site.data.businesses_welcome.name }}
+{%- include home-corner_rendering.html -%}
+
 
 <hr class="spacer">
 
-{%- include home-corner_rendering.html -%}
+<!-- BUSINESSES WELCOME -->
+{{ site.data.businesses_welcome.name }}
 
 <!-- DESTINED FOR DESTIONATION -->
 {{ site.data.destined_for_destionation.name }}
@@ -56,14 +57,8 @@ layout: home
 <hr class="spacer">
 
 <!-- BRICK & MORTAR INTEREST LIST -->
-{{ site.data.interest_list.name }}
+{% include home-interest_form.html %}
 
-<div>
-	<h5 style="text-align: center; padding-top: 200px;padding-bottom: 200px;">PLACEHOLDER INTEREST FORM</h5>
-
-	<div class="divbar red push" style="background-image:url('{{ 'assets/branding/redbar.png' | relative_url }}')">
-	</div>
-</div>
 
 <hr class="spacer">
 
