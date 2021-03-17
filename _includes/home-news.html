@@ -3,23 +3,17 @@
   <img id="lightning" width="490" height="257" src="{{ 'assets/branding/lightning.png' | relative_url }}" alt="A decorative lighting image pointing towards the News section">
   <h2 class="post-header">
   {{ site.data.now_happening.name | default: "Now Happening"}}</h2>
-  <span id="newsbig">NEWS</span>
-  <ul class="news-list">
-    {%- for post in site.posts | limit: 3 -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-      {%- endif -%}
-    </li>
+  <span id="newsbig" class="animate__animated animate__slideInLeft animate__slower">NEWS</span>
+  <section class="news-list">
+    {%- for post in site.posts -%}
+      <article>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            <img src="{{ post.hero }}" alt="{{ post.preview_alt }}">
+            <h3>{{ post.title | escape }}</h3>
+          </a>
+      </article>
     {%- endfor -%}
-  </ul>
+  </section>
 </div>
     
 
