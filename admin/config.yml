@@ -169,6 +169,8 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Author', name: 'author', widget: 'text' }
       - { label: 'Hero', name: 'hero', widget: 'image' }
+      - { label: 'Preview Image', name: 'preview', widget: 'image' }
+      - { label: 'Preview Image Alt', name: 'preview_alt', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'pages'
     label: 'Pages'
