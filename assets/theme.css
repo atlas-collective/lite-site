@@ -1,6 +1,9 @@
 body {
 	overflow-x: hidden;
 }
+* {
+    box-sizing: border-box;
+}
 h2 {
 	font-family: Neuzon;
 }
@@ -14,6 +17,9 @@ p {
 }
 .fc-dark {
 	color: #304251;
+}
+.fc-light {
+	color: #E5E3DD;
 }
 /* font-family helpers */
 .ff-neu {
@@ -39,7 +45,7 @@ p {
 	border-bottom: 0;
 	min-height: 100px;
 	position: sticky;
-	top: -60px;
+	top: -40px;
 	display: flex;
     flex-direction: column;
     justify-content: center;

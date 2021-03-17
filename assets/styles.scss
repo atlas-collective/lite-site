@@ -127,13 +127,25 @@
 
 //interest form
 .interest-bg {
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 61px; //compensate for bar
   @include for-small {
-    //background-image:url('{{ 'assets/home/hatsmmobile.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
   }
   @include for-med-up {
-    min-height: 57vw; 
-    height: 57vw;
-    //background-image:url('{{ 'assets/home/hats.png' | relative_url }}');
+    min-height: 46vw; 
+    height: 46vw;
+    background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
+  }
+
+  .slidebar {
+    background-image:url('{{ 'assets/branding/redbar.png' | relative_url }}');
+    //transform: translateX(14.286%);
+    position: absolute;
+    left: 14.286%;
+    bottom: -40px;
+    width: 100%;
   }
 }
 .interest-content {
@@ -158,9 +170,11 @@
   background-image:url('{{ 'assets/branding/newsbg.png' | relative_url }}');
   background-size: cover;
   background-position: center center;
+  text-align: center;
+  position: relative;
   @include for-med-up {
-    min-height: 47vw; 
-    height: 47vw;
+    min-height: 52vw; 
+    height: 52vw;
   }
 
   h2 {
@@ -171,17 +185,37 @@
     }
   }
   #lightning {
-      z-index: 1;
+    z-index: 1;
+    transform: translateX(10px);
+    position: relative;
   }
   
   #newsbig {
     font-family: HWT American;
     position: absolute;
       top: -140px;
-      left: 10%;
+      left: 20%;
       font-size: 22rem;
       opacity: .38;
       pointer-events: none;
+  }
+  .news-list {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    @include for-med-up {
+      grid-column-start: 3;
+      grid-column-end: 11;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    @include for-small {
+      grid-template-columns: 1fr;
+    }
+    article {
+      background: white;
+      padding: 20px;
+    }
   }
 }
 

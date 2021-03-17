@@ -121,8 +121,9 @@
 }
 #logomain {
   position: absolute;
-  top: -72px;
+  top: -32px;
   left: 0;
+  z-index: 999;
 }
 
 #logoscrolled {
@@ -136,9 +137,9 @@
 .header-not-at-top #logoscrolled {
   opacity: 1;
 }
-.header-not-at-top #logomain {
-  opacity: 0;
-}
+// .header-not-at-top #logomain {
+//   opacity: 0;
+// }
 
 
 // COMMON ELEMENTS 
@@ -300,6 +301,7 @@
     @include for-small {
       grid-column-start: 1;
       grid-column-end: 13;
+      align-items: center;
     }   
     display: flex;
     flex-direction: column;
@@ -310,8 +312,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 500px;
         li {
-          padding: 5px 15px;
+          padding: 5px 10px;
           text-align: center;
           a {
             color: #881719;
@@ -327,8 +330,19 @@
     .addr-social {
        display: flex;
        justify-content: space-between;
-       padding: 15px;
+       padding: 15px 10px;
        color: #2F3634;
+       width: 100%;
+       p {
+        margin-bottom: 0;
+       }
+       .social-icons {
+          display: flex;
+          img {
+            height: 35px;
+            margin-left: 6px;
+          }
+       }
     }
   }
   .legal {
