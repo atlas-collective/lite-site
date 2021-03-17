@@ -153,6 +153,37 @@
   }
 }
 
+// homepage posts section
+.news {
+  background-image:url('{{ 'assets/branding/newsbg.png' | relative_url }}');
+  background-size: cover;
+  background-position: center center;
+  @include for-med-up {
+    min-height: 47vw; 
+    height: 47vw;
+  }
+
+  h2 {
+    font-size: 4.3rem;
+    color: white;
+    @include for-small {
+      font-size: 2.2rem;
+    }
+  }
+  #lightning {
+      z-index: 1;
+  }
+  
+  #newsbig {
+    font-family: HWT American;
+    position: absolute;
+      top: -140px;
+      left: 10%;
+      font-size: 22rem;
+      opacity: .38;
+      pointer-events: none;
+  }
+}
 
 
 // the people behind it
@@ -228,3 +259,4 @@
     }
   }
 }
+

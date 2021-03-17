@@ -111,38 +111,6 @@ p {
 }
 
 
-/* news section */
-.news {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 904px;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    overflow-x: hidden;
-}
-#lightning {
-    z-index: 1;
-}
-.post-header {
-	font-size: 4.3rem;
-	color: white;
-}
-#newsbig {
-	font-family: HWT American;
-	position: absolute;
-    top: -140px;
-    left: 10%;
-    font-size: 22rem;
-    opacity: .38;
-    pointer-events: none;
-}
-ul.news-list {
-    margin: 0;
-    list-style-type: none;
-}
 
 /* interest form */
 .divbar.push {
