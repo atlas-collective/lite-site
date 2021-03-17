@@ -152,3 +152,79 @@
     grid-column-end: 13;
   }
 }
+
+
+
+// the people behind it
+.the-people {
+  h2 {
+    color: #2F3634;
+    text-align: center;
+    font-size: 4.3rem;
+    line-height: 1.4;
+    @include for-small {
+      font-size: 2.1rem;
+      line-height: 1.4;
+    }
+  }
+  .whos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include for-small {
+      grid-template-columns: 1fr 1fr;
+    }
+    .who {
+      padding: 20px 20px 50px 20px;
+      position: relative;
+      @include for-med-up {
+        &:not(:last-of-type) {
+            border-right-style: dotted;
+            border-right-width: 5px;
+        }
+      }
+      @include for-small {
+        text-align: center;
+      }
+      .icon-space {
+        min-height: 120px;
+      }
+      h3 {
+        color: #881719;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        @include for-small {
+          font-size: 1.2rem;
+          line-height: 1.2;
+        }
+      }
+      p {
+        color: #881719;
+        font-size: 22px;
+        line-height: 1.9;
+        @include for-small {
+          font-size: 16px;
+          line-height: 1.4;
+        }
+      }
+      a {
+        background-color: #881719;
+        color: #E5E3DD;
+        font-family: Forma DJR Display;
+        letter-spacing: 1px;
+        border-radius: 24px;
+        position: absolute;
+        bottom: 0;
+        @include for-small {
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 16px;
+          padding: 5px 30px 3px 30px;
+        }
+        @include for-med-up {
+          padding: 10px 30px 8px 30px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

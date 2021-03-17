@@ -1,5 +1,5 @@
 body {
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 }
 h2 {
 	font-family: Neuzon;
@@ -57,7 +57,7 @@ p {
 }
 
 .page-width {
-  max-width: 1600px;
+  max-width: 1560px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -109,59 +109,7 @@ p {
 	width: 100%;
 	height: auto;
 }
-/* The people behind section */
-.whos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.who {
-	padding: 20px 20px 50px 20px;
-	position: relative;
-}
-@media only screen and (max-width: 750px) {
-	.whos {
-		grid-template-columns: 1fr 1fr;
-	}
-	.who:nth-of-type(1) {
-	    border-right-style: dotted;
-	    border-right-width: 5px;
-	}
-}
-.who:not(:last-of-type) {
-    border-right-style: dotted;
-    border-right-width: 5px;
-}
-.icon-space {
-    min-height: 120px;
-}
-.the-people h2 {
-	color: #2F3634;
-	font-size: 4.3rem;
-	text-align: center;
-}
-.whos h3 {
-	color: #881719;
-	font-size: 1.8rem;
-	font-family: Forma DJR Display;
-	text-transform: uppercase;
-}
-.whos p {
-	font-family: Forma DJR Micro;
-	color: color: #881719;
-	font-size: 22px;
-	line-height: 1.9;
-}
-.whos a {
-	background-color: #881719;
-	color: #E5E3DD;
-	font-family: Forma DJR Display;
-	padding: 10px 30px;
-	font-size: 24px;
-	letter-spacing: 1px;
-	border-radius: 25px;
-	position: absolute;
-	bottom: 0;
-}
+
 
 /* news section */
 .news {
@@ -211,52 +159,4 @@ ul.news-list {
 img#footer_hero {
     width: 100%;
     height: auto;
-}
-
-/* footer styles */
-.footer-content {
-    display: flex;
-    padding-bottom: 30px;
-    justify-content: space-between;
-}
-.footer-logos {
-    display: flex;
-    align-items: flex-end;
-}
-#footer_logo {
-    margin-top: -70px;
-}
-img#dev_logos {
-    height: auto;
-}
-.flinks {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-ul.footer-links {
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-ul.footer-links li {
-    padding: 5px 15px;
-}
-
-.addr-social {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-}
-.legal {
-	font-family: Forma DJR Micro;
-	font-size: 11px;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	padding-bottom: 20px;
-
 }
