@@ -124,6 +124,28 @@
   }
 }
 
+// businesses welcome
+// hats
+.business-bg {
+  @include for-small {
+    background-image:url('{{ 'assets/home/business.jpg' | relative_url }}');
+  }
+  @include for-med-up {
+    min-height: 57vw; 
+    height: 57vw;
+    background-image:url('{{ 'assets/home/business.jpg' | relative_url }}');
+  }
+}
+.business-content {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  @include for-med-up {
+    padding-left: 30px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+}
+
 
 //interest form
 .interest-bg {
