@@ -150,6 +150,7 @@
   border-radius: 24px;
   color: #E5E3DD;
   font-family: Forma DJR Display;
+  display: inline-block;
   @include for-large {
     font-size: 24px;
     line-height: 48px;
@@ -180,6 +181,11 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
+}
+.slidebar {
+  height: 35px;
+  background-size: 100% auto;
+  background-position: center;
 }
 
 //  DEFAULTS FROM MINIMA

@@ -128,7 +128,7 @@
 // hats
 .business-bg {
   @include for-small {
-    background-image:url('{{ 'assets/home/business.jpg' | relative_url }}');
+    background-image:url('{{ 'assets/home/businessmobile.jpg' | relative_url }}');
   }
   @include for-med-up {
     min-height: 57vw; 
@@ -137,13 +137,55 @@
   }
 }
 .business-content {
-  grid-column-start: 1;
+  @include for-small {
+    grid-column-start: 2;
+    grid-column-end: 14;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  @include for-med-up {
+    grid-column-start: 3;
+    grid-column-end: 8;
+  }
+}
+.business-images {
+  grid-column-start: 3;
   grid-column-end: 13;
   @include for-med-up {
-    padding-left: 30px;
-    grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-start: 9;
+    grid-column-end: 15;
   }
+  .first {
+    @include for-med-up {
+      margin-bottom: 30px;
+    }
+  }
+  @include for-small {
+    display: flex;
+    order: -1;
+    padding-top: 30px;
+    img { 
+      width: 50%; 
+    }
+  }
+}
+.slide-holder {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+  height: 47px;
+}
+.slidebar.biz {
+  background-image:url('{{ 'assets/branding/bizbar.png' | relative_url }}');
+  height: 47px;
+  width: 100%;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 14.286%;
 }
 
 

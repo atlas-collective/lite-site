@@ -84,6 +84,10 @@ p {
 	display: grid;
 	grid-template-columns: repeat(12,1fr);
 }
+.grid14 {
+	display: grid;
+	grid-template-columns: repeat(14,1fr);
+}
 .vcen {
 	display: flex;
 	flex-direction: column;
@@ -126,9 +130,9 @@ p {
 /* hero above footer */
 .divbar {
 	height: 21px;
-	background-size: auto 100%;
+	background-size: 100% auto;
 	background-position: center;
-	background-repeat: repeat-x;
+	
 }
 img#footer_hero {
     width: 100%;
