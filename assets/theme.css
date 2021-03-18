@@ -1,4 +1,7 @@
 body {
+	/*overflow-x: hidden;*/
+}
+.home {
 	overflow-x: hidden;
 }
 * {

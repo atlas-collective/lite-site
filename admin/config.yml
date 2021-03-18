@@ -67,7 +67,7 @@ collections:
           - { label: "Long text", name: "body", widget: "markdown"}
           - { label: "Button Text", name: "btext", widget: "string"}
           - { label: "Button Link", name: "burl", widget: "string"}
-      - label: "destined_for_destionation"
+      - label: "Destined for Destination"
         name: "destined_for_destionation"
         file: "_data/destined_for_destionation.yml"
         fields:

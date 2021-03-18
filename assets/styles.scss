@@ -125,7 +125,6 @@
 }
 
 // businesses welcome
-// hats
 .business-bg {
   @include for-small {
     background-image:url('{{ 'assets/home/businessmobile.jpg' | relative_url }}');
@@ -189,7 +188,61 @@
 }
 
 //destination
-
+.destination-bg {
+  @include for-small {
+    background-image:url('{{ 'assets/home/destinationmobile.jpg' | relative_url }}');
+  }
+  @include for-med-up {
+    min-height: 47vw; 
+    height: 47vw;
+    background-image:url('{{ 'assets/home/destination.png' | relative_url }}');
+  }
+}
+.destination-content {
+  @include for-small {
+    grid-column-start: 2;
+    grid-column-end: 14;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  @include for-med-up {
+    grid-column-start: 8;
+    grid-column-end: 15;
+  }
+}
+.destination-images {
+  grid-column-start: 3;
+  grid-column-end: 13;
+  @include for-med-up {
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .first {
+    @include for-med-up {
+      margin-bottom: 30px;
+    }
+  }
+  @include for-small {
+    display: flex;
+    order: -1;
+    padding-top: 30px;
+    img { 
+      width: 50%; 
+    }
+  }
+}
+.slidebar.dest {
+  background-image:url('{{ 'assets/branding/destbar.png' | relative_url }}');
+  height: 47px;
+  width: 100%;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 14.286%;
+}
 
 //interest form
 .interest-bg {

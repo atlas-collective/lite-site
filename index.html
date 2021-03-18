@@ -38,8 +38,11 @@ layout: home
 <!-- BUSINESSES WELCOME -->
 {% include home-business.html %}
 
+<hr class="spacer">
+
 <!-- DESTINED FOR DESTIONATION -->
-{{ site.data.destined_for_destionation.name }}
+{% include home-destination.html %}
+
 <hr class="spacer">
 <!-- RENDERINGS -->
 {%- include home-site_rendering.html -%}
