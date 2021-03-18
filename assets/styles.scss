@@ -194,7 +194,6 @@
   }
   @include for-med-up {
     min-height: 47vw; 
-    height: 47vw;
     background-image:url('{{ 'assets/home/destination.jpg' | relative_url }}');
   }
 }
@@ -208,7 +207,7 @@
   }
   @include for-med-up {
     grid-column-start: 8;
-    grid-column-end: 15;
+    grid-column-end: 14;
   }
 }
 .destination-images {
@@ -241,7 +240,7 @@
   background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
-  right: 14.286%;
+  left: 14.286%;
 }
 
 //interest form
