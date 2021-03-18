@@ -52,8 +52,12 @@
   
 }
 .mm-content {
-  grid-column-start: 1;
-  grid-column-end: 13;
+  @include for-small {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
   @include for-med-up {
     grid-column-start: 2;
     grid-column-end: 8;
@@ -63,22 +67,71 @@
 // charm
 .charm-bg {
   @include for-small {
-    background-image:url('{{ 'assets/home/charmmobile.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/charm_mobile.jpg' | relative_url }}');
   }
   @include for-med-up {
-    min-height: 55vw; 
-    height: 55vw;
-    background-image:url('{{ 'assets/home/charm.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/charm.jpg' | relative_url }}');
+    background-attachment: fixed;
   }
-}
-.charm-content {
-  grid-column-start: 1;
-  grid-column-end: 13;
-  @include for-med-up {
-    grid-column-start: 3;
-    grid-column-end: 8;
+  .charm-content {
+    @include for-small {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 10;
+      padding-top: 30px;
+      padding-left: 15px;
+    }
+    h2, p {
+      position: relative;
+      z-index: 9;
+    }
+    
+    @include for-med-up {
+      grid-column-start: 3;
+      grid-column-end: 8;
+    }
+    .charm_map {
+      @include for-med-up {
+        position: absolute;
+        top: -13vw;
+        left: -10vw;
+        z-index: 1;
+        width: 32vw;
+      }  
+    }
   }
-  
+  .tower {
+    @include for-small {
+      grid-column-start: 10;
+      grid-column-end: 15;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    @include for-med-up {
+      grid-column-start: 8;
+      grid-column-end: 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+      
+  }
+  .people {
+    @include for-small {
+      grid-column-start: 10;
+      grid-column-end: 15;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      order: -1;
+    }
+    @include for-med-up {
+      grid-column-start: 11;
+      grid-column-end: 15;
+    } 
+  }
 }
 
 // hats
@@ -122,7 +175,7 @@
     bottom: -80px;
     left: -30px;
     font-size: 22rem;
-    opacity: .2;
+    opacity: .1;
     pointer-events: none;
     z-index: -1;
   }
@@ -248,44 +301,9 @@
   left: 14.286%;
 }
 
-//interest form
-.interest-bg {
-  background-repeat: no-repeat;
-  position: relative;
-  margin-bottom: 61px; //compensate for bar
-  @include for-small {
-    background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
-  }
-  @include for-med-up {
-    min-height: 46vw; 
-    height: 46vw;
-    background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
-  }
-}
-.interest-content {
-  grid-column-start: 1;
-  grid-column-end: 13;
-  @include for-med-up {
-    grid-column-start: 3;
-    grid-column-end: 9;
-  }
-}
-.interest-form {
-  grid-column-start: 1;
-  grid-column-end: 13;
-  @include for-med-up {
-    grid-column-start: 9;
-    grid-column-end: 13;
-  }
-}
-.slidebar.interest {
-  background-image:url('{{ 'assets/branding/bar_red.png' | relative_url }}');
-  left: 14.286%;
-}
-
 // homepage posts section
 .news {
-  background-image:url('{{ 'assets/branding/newsbg.png' | relative_url }}');
+  background-image:url('{{ 'assets/home/news_bg.png' | relative_url }}');
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -293,6 +311,9 @@
   @include for-med-up {
     min-height: 52vw; 
     height: 52vw;
+  }
+  @include for-small {
+    padding-bottom: 100px;
   }
 
   h2 {
@@ -311,15 +332,19 @@
   #newsbig {
     font-family: HWT American;
     position: absolute;
-      top: -140px;
-      left: 20%;
+    opacity: .38;
+    pointer-events: none;
+    top: -1.5rem;
+    left: 30vw;
+    font-size: 12rem;
+    line-height: 1;
+    @include for-med-up {
       font-size: 22rem;
-      opacity: .38;
-      pointer-events: none;
+    }
   }
   .news-list {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column-start: 3;
+    grid-column-end: 11;
     @include for-med-up {
       grid-column-start: 3;
       grid-column-end: 11;
@@ -333,9 +358,86 @@
     article {
       background: white;
       padding: 20px;
+      @include for-small {
+        margin-bottom: 15px;
+        padding: 10px;
+      }
     }
   }
 }
+.slidebar.news {
+  background-image:url('{{ 'assets/branding/bar_news.png' | relative_url }}');
+}
+
+//interest form
+.interest-bg {
+  background-repeat: no-repeat;
+  @include for-small {
+    background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include for-med-up {
+    min-height: 46vw; 
+    height: 46vw;
+    background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
+    background-position: left 07.291666667vw top 0px; //140px offset @ 1920px wide = 140/1920 is ratio 
+    background-size: cover;
+  }
+}
+.interest-content {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  @include for-med-up {
+    grid-column-start: 3;
+    grid-column-end: 9;
+  }
+}
+.interest-form {
+  background-color: #881719;
+  grid-column-start: 3;
+  grid-column-end: 11;
+  @include for-med-up {
+    grid-column-start: 9;
+    grid-column-end: 12;
+    margin-left: 50px;
+  }
+  .mc-wrap {
+    label {
+      display: none;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        display: block;
+    }
+
+    .mc-field-group {
+        display: flex;
+    }
+
+    #mc_embed_signup_scroll {
+        padding: 10px 5px;
+    }
+
+    #mc-embedded-subscribe {
+        width: auto;
+        padding: 5px 30px 3px 30px;
+    }
+
+    .clear {
+        display: flex;
+        justify-content: flex-end;
+    }
+  }
+}
+.slidebar.interest {
+  background-image:url('{{ 'assets/branding/bar_red.png' | relative_url }}');
+  left: 14.286%;
+}
+
+
 
 
 // the people behind it
@@ -410,5 +512,14 @@
       }
     }
   }
+}
+
+// footer hero
+.footer_hero {
+    width: 100%;
+    height: auto;
+}
+.slidebar.footer {
+  background-image:url('{{ 'assets/branding/bar_gold.png' | relative_url }}');
 }
 

@@ -219,18 +219,24 @@
 .slide-holder {
   position: relative;
   width: 100%;
-  margin-top: 24px;
-  height: 47px;
+  margin-top: calc(100vw * 0.01354166667);
+  height: calc(100vw * 0.01458333333);
+  // @include for-small {
+  //   height: 15px;
+  //   margin-top: 15px;
+  // }
 }
 .slidebar {
-  height: 35px;
+  height: calc(100vw * 0.01458333333);
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
-
+  // @include for-small {
+  //   height: 15px;
+  // }
 }
 
 //  DEFAULTS FROM MINIMA
@@ -355,6 +361,7 @@
       grid-column-start: 1;
       grid-column-end: 13;
       align-items: center;
+      margin-top: 20px;
     }   
     display: flex;
     flex-direction: column;
