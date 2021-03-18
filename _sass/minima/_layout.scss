@@ -124,6 +124,9 @@
   top: -32px;
   left: 0;
   z-index: 999;
+  max-width: 323px;
+  width: 100%;
+  transform: rotate(352deg);
 }
 
 #logoscrolled {
@@ -295,6 +298,8 @@
     }
     #footer_logo {
         margin-top: -70px;
+        transform: rotate(352deg);
+        max-width: 323px;
     }
     img#dev_logos {
         height: auto;

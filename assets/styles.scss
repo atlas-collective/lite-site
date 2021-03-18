@@ -195,7 +195,7 @@
   @include for-med-up {
     min-height: 47vw; 
     height: 47vw;
-    background-image:url('{{ 'assets/home/destination.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/destination.jpg' | relative_url }}');
   }
 }
 .destination-content {
