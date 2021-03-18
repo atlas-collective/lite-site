@@ -61,6 +61,16 @@
 .fup {
   text-transform: uppercase;
 }
+.desktop {
+  @include for-small {
+    display: none;
+  }
+}
+.mobile {
+  @include for-med-up {
+    display: none;
+  }
+}
 
 //TOP NAV
 .site-header-inner {
