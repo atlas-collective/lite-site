@@ -101,18 +101,6 @@ strong {
 	height: 100%;
 }
 
-.hero_image {
-	width: 100%;
-	height: auto;
-	background-position: center center;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-}
-.hero_image > img {
-	opacity: 0;
-}
-
-
 /* corner rendering image row */
 #corner_rendering {
 	width: 100%;

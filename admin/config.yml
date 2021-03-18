@@ -19,6 +19,7 @@ collections:
           - { label: name, name: name, widget: string, hint: "hero_image" }
           - { label: "Hero Image", name: hero_image, widget: image, hint: "Hero Image Background"}
           - { label: "Hero Image Alt Text", name: hero_image_alt, widget: string, hint: "Hero Image Alt Text" }
+          - { label: "Hero Image for Mobile", name: hero_image_mobile, widget: image, hint: "Hero Image Mobile"}
       - label: "More To The Mix"
         name: "more_to_the_mix"
         file: "_data/more_to_the_mix.yml"

@@ -17,6 +17,28 @@
 
 // INDIVIDUAL HOMEPAGE SECTION LAYOUTS
 
+// Hero 
+.hero_image {
+  width: 100%;
+  height: auto;
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  background-image:url('{{ site.data.hero_image.hero_image }}');
+  @include for-small {
+    background-image:url('{{ site.data.hero_image.hero_image_mobile }}');
+  }
+  &> img {
+    opacity: 0;
+  }
+}
+.slidebar.hero {
+  background-image:url('{{ 'assets/branding/bar_blue.png' | relative_url }}');
+}
+
+
+
 // More to the Mix 
 .mm-bg {
   @include for-small {
@@ -169,21 +191,9 @@
     }
   }
 }
-.slide-holder {
-  position: relative;
-  width: 100%;
-  margin-top: 24px;
-  height: 47px;
-}
+
 .slidebar.biz {
-  background-image:url('{{ 'assets/branding/bizbar.png' | relative_url }}');
-  height: 47px;
-  width: 100%;
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 0;
+  background-image:url('{{ 'assets/branding/bar_biz.png' | relative_url }}');
   right: 14.286%;
 }
 
@@ -234,14 +244,7 @@
   }
 }
 .slidebar.dest {
-  background-image:url('{{ 'assets/branding/destbar.png' | relative_url }}');
-  height: 47px;
-  width: 100%;
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 0;
+  background-image:url('{{ 'assets/branding/bar_dest.png' | relative_url }}');
   left: 14.286%;
 }
 
@@ -276,11 +279,8 @@
   }
 }
 .slidebar.interest {
-  background-image:url('{{ 'assets/branding/redbar.png' | relative_url }}');
-  //transform: translateX(14.286%);
-  position: absolute;
+  background-image:url('{{ 'assets/branding/bar_red.png' | relative_url }}');
   left: 14.286%;
-  width: 100%;
 }
 
 // homepage posts section
