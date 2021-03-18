@@ -3,7 +3,7 @@
     <img id="lightning" width="490" height="257" src="{{ 'assets/branding/lightning.png' | relative_url }}" alt="A decorative lighting image pointing towards the News section">
     <h2>
     {{ site.data.now_happening.name | default: "Now Happening"}}</h2>
-    <span id="newsbig" class="animate__animated" data-animations="animate__slideInLeft animate__slower">NEWS</span>
+    <span id="newsbig" class="bigword neews animate__animated" data-animations="animate__slideInLeft animate__slower">NEWS</span>
     <div class="grid12">
       <section class="news-list">
         {%- for post in site.posts -%}
@@ -19,6 +19,6 @@
   </div>
 </div>
 <div class="slide-holder">
-  <div class="slidebar news animate__animated" data-animations="animate__slideInRight animate__slower animate__delay-1s">
+  <div class="slidebar neews animate__animated" data-animations="animate__slideInRight animate__slower animate__delay-1s">
   </div>
 </div>
