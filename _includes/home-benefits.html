@@ -3,8 +3,8 @@
 		<article class="benefits-content fc-white">
 			<div class="">
 				<h2 class="fs-large fup fc-dark">{{ site.data.life_with_benefits.title }}</h2>
-				<p class="ff-micro fs-body fc-dark">{{ site.data.life_with_benefits.bodytop }}
-				</p>
+				<div class="ff-micro fs-body fc-dark">{{ site.data.life_with_benefits.bodytop | markdownify }}
+				</div>
 				<ul class="ff-micro fs-body fc-dark amenities">
 					{% for item in site.data.life_with_benefits.amenities %}
 					<li> {{ item.name }}</li>
