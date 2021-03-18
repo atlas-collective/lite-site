@@ -71,7 +71,10 @@ collections:
         name: "destined_for_destionation"
         file: "_data/destined_for_destionation.yml"
         fields:
-          - { label: name, name: name, widget: string, hint: "destined_for_destionation" }
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Long text", name: "body", widget: "markdown"}
+          - { label: "Button Text", name: "btext", widget: "string"}
+          - { label: "Button Link", name: "burl", widget: "string"}
       - label: "Site Rendering / Image Row "
         name: "site_renderings"
         file: "_data/site_renderings.yml"
