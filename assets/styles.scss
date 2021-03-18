@@ -191,10 +191,12 @@
 .destination-bg {
   @include for-small {
     background-image:url('{{ 'assets/home/destinationmobile.jpg' | relative_url }}');
+    background-size: cover;
   }
   @include for-med-up {
     min-height: 47vw; 
     background-image:url('{{ 'assets/home/destination.jpg' | relative_url }}');
+    background-size: auto 100%;
   }
 }
 .destination-content {
@@ -256,15 +258,6 @@
     height: 46vw;
     background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
   }
-
-  .slidebar {
-    background-image:url('{{ 'assets/branding/redbar.png' | relative_url }}');
-    //transform: translateX(14.286%);
-    position: absolute;
-    left: 14.286%;
-    bottom: -40px;
-    width: 100%;
-  }
 }
 .interest-content {
   grid-column-start: 1;
@@ -281,6 +274,13 @@
     grid-column-start: 9;
     grid-column-end: 13;
   }
+}
+.slidebar.interest {
+  background-image:url('{{ 'assets/branding/redbar.png' | relative_url }}');
+  //transform: translateX(14.286%);
+  position: absolute;
+  left: 14.286%;
+  width: 100%;
 }
 
 // homepage posts section

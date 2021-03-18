@@ -40,7 +40,7 @@
 
 
 // METHOD 2
-
+// header logo triggering
 if (
   "IntersectionObserver" in window &&
   "IntersectionObserverEntry" in window &&
@@ -57,3 +57,28 @@ let observer = new IntersectionObserver(entries => {
 });
 observer.observe(document.querySelector("#topanchor"));
 }
+// animation triggering
+const animatedElements = document.querySelectorAll('.animate__animated');
+
+function handleIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      console.log('triggering animation for:');
+      console.log(entry.target);
+      console.log('animations:');
+      console.log(entry.target.dataset.animations);
+      entry.target.className += " " + entry.target.dataset.animations;
+    } else {
+      //entry.target.classList.remove('visible')
+      //no need to clean up - only animate once
+    }
+  });
+}
+
+const animObserver = new IntersectionObserver(handleIntersection);
+for (var i = animatedElements.length - 1; i >= 0; i--) {
+  animObserver.observe(animatedElements[i]);
+}
+
+
+

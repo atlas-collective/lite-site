@@ -65,15 +65,24 @@
 //TOP NAV
 .site-header-inner {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    @include for-small {
+      grid-template-columns: 5fr 3fr;
+    }
     .logowrap {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .tlinks {
       display: flex;
       width: 100%;
       align-items: center;
       justify-content: center;
+      @include for-small {
+        display: none;
+      }
       nav {
         width: 100%;
         ul  {
@@ -109,15 +118,16 @@
         padding: 5px 10px;
         border: 1px solid white;
         border-radius: 24px;
+        letter-spacing: 1px;
         color: #E5E3DD;
       }
     }
 }
 //scroll logics.
 #logoscrolled {
-    position: absolute;
-    left: 0;
-    top: 20px;
+    // position: absolute;
+    // left: 0;
+    // top: 15px;
 }
 #logomain {
   position: absolute;
@@ -127,11 +137,17 @@
   max-width: 323px;
   width: 100%;
   transform: rotate(352deg);
+  @include for-small {
+    display: none;
+  }
 }
 
 #logoscrolled {
   opacity: 0;
   transition: .2s ease opacity;
+  @include for-small {
+    opacity: 1;
+  }
 }
 #logomain {
   opacity: 1;
@@ -148,9 +164,10 @@
 // COMMON ELEMENTS 
 .cta {
   background-color: #782224;
-  padding: 10px 30px;
+  padding: 5px 30px;
   border: 1px solid white;
   border-radius: 24px;
+  letter-spacing: 1px;
   color: #E5E3DD;
   font-family: Forma DJR Display;
   display: inline-block;
