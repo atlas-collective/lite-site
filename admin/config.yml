@@ -46,7 +46,7 @@ collections:
         file: "_data/life_with_benefits.yml"
         fields:
           - { label: "Title", name: "title", widget: "string"}
-          - { label: "Long text - Top", name: "bodytop", widget: "text"}
+          - { label: "Long text - Top", name: "bodytop", widget: "markdown", required: false}
           - label: "Amenities"
             name:  amenities
             widget: list
