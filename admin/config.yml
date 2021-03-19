@@ -60,6 +60,7 @@ collections:
         fields:
           - { label: name, name: name, widget: string, hint: "corner_renderings" }
           - { label: "Corner Rendering / Image", name: corner_rendering, widget: image, hint: "Corner Rendering Image"}
+          - { label: "Corner Rendering Mobile Image", name: corner_rendering_mobile, widget: image, hint: "Corner Rendering Mobile Image"}
       - label: "Businesses Welcome"
         name: "businesses_welcome"
         file: "_data/businesses_welcome.yml"
