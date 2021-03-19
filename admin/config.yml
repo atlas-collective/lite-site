@@ -80,8 +80,9 @@ collections:
         name: "site_renderings"
         file: "_data/site_renderings.yml"
         fields:
-          - { label: name, name: name, widget: string, hint: "site_renderings" }
           - { label: "Site Rendering / Image", name: site_rendering, widget: image, hint: "Site Rendering Image"}
+          - { label: "Site Rendering Image Alt Text", name: site_rendering_alt, widget: string, hint: "Site Rendering Alt Text"}
+          - { label: "Site Rendering / Image", name: site_rendering_mobile, widget: image, hint: "Site Rendering Mobile Image"}
       - label: "The People Behind The Place"
         name: "the_people_behind"
         file: "_data/the_people_behind.yml"
