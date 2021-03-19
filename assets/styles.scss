@@ -42,7 +42,7 @@
 // More to the Mix 
 .mm-bg {
   @include for-small {
-    background-image:url('{{ 'assets/home/moremixmobile.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/moremixmobile.jpg' | relative_url }}');
   }
   @include for-med-up {
     min-height: 67vw; 
@@ -190,7 +190,7 @@
   @include for-med-up {
     min-height: 57vw; 
     height: 57vw;
-    background-image:url('{{ 'assets/home/benefitslifestyle.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/benefitslifestyle.jpg' | relative_url }}');
     background-size: 35% auto;
     background-position: left center;
     background-repeat: no-repeat;
