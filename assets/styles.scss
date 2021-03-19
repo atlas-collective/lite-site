@@ -47,7 +47,7 @@
   @include for-med-up {
     min-height: 67vw; 
     height: 67vw;
-    background-image:url('{{ 'assets/home/moremix.png' | relative_url }}');
+    background-image:url('{{ 'assets/home/moremix.jpg' | relative_url }}');
     background-size: 100% auto;
   }
   
@@ -436,7 +436,7 @@
 
 // homepage posts section
 .news {
-  background-image:url('{{ 'assets/home/news_bg.png' | relative_url }}');
+  background-image:url('{{ 'assets/home/news_bg.jpg' | relative_url }}');
   background-size: cover;
   background-position: center center;
   text-align: center;
