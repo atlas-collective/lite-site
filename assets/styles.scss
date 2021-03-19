@@ -48,6 +48,7 @@
     min-height: 67vw; 
     height: 67vw;
     background-image:url('{{ 'assets/home/moremix.png' | relative_url }}');
+    background-size: 100% auto;
   }
   
 }
