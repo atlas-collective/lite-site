@@ -147,6 +147,7 @@
     background-position: right 7vw top 0;
     background-size: cover;
     padding-top: 07.5vw;
+    margin-top: 215px;
   }
   background-repeat: no-repeat;
 }
@@ -176,7 +177,7 @@
   @include for-med-up {
     grid-column-start: 9;
     grid-column-end: 15;
-    transform: translateY(-155px);
+    transform: translateY(-215px);
   }
 }
 
