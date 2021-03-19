@@ -1,6 +1,6 @@
 <div class="news">
   <div class="page-width">
-    <img id="lightning" width="490" height="257" src="{{ 'assets/branding/lightning.png' | relative_url }}" alt="A decorative lighting image pointing towards the News section">
+    <img class="lazy" id="lightning" width="490" height="257" data-src="{{ 'assets/branding/lightning.png' | relative_url }}" alt="A decorative lighting image pointing towards the News section">
     <h2>
     {{ site.data.now_happening.name | default: "Now Happening"}}</h2>
     <span id="newsbig" class="bigword neews animate__animated" data-animations="animate__slideInLeft animate__slower">NEWS</span>
@@ -9,7 +9,7 @@
         {%- for post in site.posts -%}
           <article>
               <a class="post-link" href="{{ post.url | relative_url }}">
-                <img src="{{ post.preview }}" alt="{{ post.preview_alt }}">
+                <img class="lazy" data-src="{{ post.preview }}" alt="{{ post.preview_alt }}">
                 <h3>{{ post.title | escape }}</h3>
               </a>
           </article>

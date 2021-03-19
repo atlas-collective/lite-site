@@ -79,6 +79,9 @@ const animObserver = new IntersectionObserver(handleIntersection);
 for (var i = animatedElements.length - 1; i >= 0; i--) {
   animObserver.observe(animatedElements[i]);
 }
-
+// begin lazy loading images
+var lazyLoadInstance = new LazyLoad({
+  // Your custom settings go here
+});
 
 
