@@ -123,6 +123,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
+      font-family: forma-djr-display, sans-serif;
       #topcta {
         background-color: #782224;
         padding: 5px 10px;
@@ -186,7 +187,7 @@
   border-radius: 24px;
   letter-spacing: 1px;
   color: white; //#E5E3DD;
-  font-family: Forma DJR Display, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: forma-djr-display, sans-serif;
   display: inline-block;
   @include for-large {
     font-size: 24px;
