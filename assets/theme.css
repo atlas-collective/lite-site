@@ -1,5 +1,6 @@
 body {
 	/*overflow-x: hidden;*/
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 .home {
 	overflow-x: hidden;
@@ -29,21 +30,23 @@ strong {
 }
 /* font-family helpers */
 .ff-neu {
-	font-family: Neuzon;
+	font-family: Neuzon,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 .ff-micro {
-	font-family: Forma DJR Micro;
+	font-family: Forma DJR Micro, Helvetica, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 .ff-display {
-	font-family: Forma DJR Display;
+	font-family: Forma DJR Display, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 .ff-akro {
-	font-family: korolev-condensed, Helvetica;
+	font-family: korolev-condensed, Helvetica, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
 #topanchor {
 	height: 1px;
 	background-color: black;
+	position: absolute;
+	top: 300px;
 }
 .site-header {
 	background-color: #F5F5F5;

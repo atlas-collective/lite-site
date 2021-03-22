@@ -49,10 +49,12 @@ if (
 let observer = new IntersectionObserver(entries => {
   if (entries[0].boundingClientRect.y < 0) {
     document.body.classList.add("header-not-at-top");
+    console.log(entries[0].boundingClientRect.y);
     console.log('** header minimial @ ' + Date.now().toString() + ' ** ');
   } else {
     document.body.classList.remove("header-not-at-top");
     console.log('** header full @ ' + Date.now().toString() + ' ** ');
+    console.log(entries[0].boundingClientRect.y);
   }
 });
 observer.observe(document.querySelector("#topanchor"));

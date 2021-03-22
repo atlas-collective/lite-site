@@ -126,12 +126,16 @@
       #topcta {
         background-color: #782224;
         padding: 5px 10px;
-        border: 1px solid white;
+        border: none; //1px solid white;
         border-radius: 24px;
         letter-spacing: 1px;
-        color: #E5E3DD;
+        color: white;//#E5E3DD;
         @include for-small {
           font-size: 13px;
+        }
+        &:hover {
+          color: white;
+          text-decoration: none;
         }
       }
     }
@@ -181,8 +185,8 @@
   border: 1px solid white;
   border-radius: 24px;
   letter-spacing: 1px;
-  color: #E5E3DD;
-  font-family: Forma DJR Display;
+  color: white; //#E5E3DD;
+  font-family: Forma DJR Display, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   display: inline-block;
   @include for-large {
     font-size: 24px;
@@ -196,10 +200,15 @@
     font-size: 16px;
     line-height: 28px;
   }
+  &:visited {
+    color: #c5c3bd;
+  }
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
-.cta:visited {
-  color: #c5c3bd;
-}
+
 .spacer {
   opacity: 0;
   @include for-small {
@@ -239,9 +248,11 @@
   }
 }
 .bigword {
-  font-family: HWT American;
+  font-family: HWT American, Impact, Garamond;
   position: absolute;
   pointer-events: none;
+  text-transform: uppercase;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -387,6 +398,9 @@
           }
           a:visited {
             color: #881719;
+          }
+          @include for-small {
+            padding: 5px 6px;
           }
         }
         span {

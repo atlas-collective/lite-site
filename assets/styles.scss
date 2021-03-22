@@ -264,8 +264,8 @@
   }
 }
 .business-images {
-  grid-column-start: 3;
-  grid-column-end: 13;
+  grid-column-start: 2;
+  grid-column-end: 14;
   @include for-med-up {
     grid-column-start: 9;
     grid-column-end: 15;
@@ -275,12 +275,28 @@
       margin-bottom: 30px;
     }
   }
+  div {
+    @include for-med-up {
+      background-image: none !important;
+    }
+  }
   @include for-small {
     display: flex;
     order: -1;
     padding-top: 30px;
+    div {
+      flex-basis: 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center center;
+    }
     img { 
-      width: 50%; 
+      width: 100%; 
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      opacity: 0;
     }
   }
 }
@@ -303,6 +319,7 @@
   }
   position: relative;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 .destination-content {
   @include for-small {
@@ -318,11 +335,16 @@
   }
 }
 .destination-images {
-  grid-column-start: 3;
-  grid-column-end: 13;
+  grid-column-start: 2;
+  grid-column-end: 14;
   @include for-med-up {
     grid-column-start: 1;
     grid-column-end: 7;
+  }
+  div {
+    @include for-med-up {
+      background-image: none !important;
+    }
   }
   .first {
     @include for-med-up {
@@ -330,12 +352,24 @@
     }
   }
   @include for-small {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     order: -1;
     padding-top: 30px;
-    img { 
-      width: 50%; 
+    div {
+      flex-basis: 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
       z-index: 2;
+      background-size: cover;
+      background-position: center center;
+    }
+    img { 
+      width: 100%; 
+      opacity: 0;
+      z-index: 2;
+      max-width: 100%;
+      height: auto;
     }
   }
 }
@@ -395,6 +429,7 @@
       }
       @include for-small {
         text-align: center;
+        padding: 20px 10px 50px 10px;
       }
       .icon-space {
         min-height: 120px;
@@ -420,7 +455,6 @@
       a {
         background-color: #881719;
         color: #E5E3DD;
-        font-family: Forma DJR Display;
         letter-spacing: 1px;
         border-radius: 24px;
         position: absolute;
