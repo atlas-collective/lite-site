@@ -84,6 +84,7 @@ for (var i = animatedElements.length - 1; i >= 0; i--) {
 // begin lazy loading images
 var lazyLoadInstance = new LazyLoad({
   // Your custom settings go here
+  threshold: 500
 });
 
 
