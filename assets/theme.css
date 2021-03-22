@@ -15,7 +15,7 @@ p {
 	white-space: break-spaces;
 }
 strong {
-	text-shadow: 0 0 #304251;
+	/*text-shadow: 0 0 #304251;*/
 }
 /* css helpers */
 /* font-color */
