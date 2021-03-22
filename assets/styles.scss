@@ -377,10 +377,8 @@
   }
 }
 .bigword.visit {
-  opacity: .38;
   top: 0;
   right: 0;
-  font-size: 8rem;
   color: #304251;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -388,6 +386,11 @@
   mix-blend-mode: color-burn;
   @include for-med-up {
     font-size: 14rem;
+    opacity: .38;
+  }
+  @include for-small {
+    opacity: .2;
+    font-size: 8rem;
   }
 }
 .slidebar.dest {

@@ -126,7 +126,7 @@
       font-family: forma-djr-display, sans-serif;
       #topcta {
         background-color: #782224;
-        padding: 5px 10px;
+        padding: 5px 10px 3px 10px;
         border: none; //1px solid white;
         border-radius: 24px;
         letter-spacing: 1px;
@@ -182,7 +182,7 @@
 // COMMON ELEMENTS 
 .cta {
   background-color: #782224;
-  padding: 5px 30px;
+  padding: 5px 30px 3px 30px;
   border: 1px solid white;
   border-radius: 24px;
   letter-spacing: 1px;
@@ -202,7 +202,7 @@
     line-height: 28px;
   }
   &:visited {
-    color: #c5c3bd;
+    color: white;//#c5c3bd;
   }
   &:hover {
     text-decoration: none;
