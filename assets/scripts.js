@@ -49,12 +49,12 @@ if (
 let observer = new IntersectionObserver(entries => {
   if (entries[0].boundingClientRect.y < 0) {
     document.body.classList.add("header-not-at-top");
-    console.log(entries[0].boundingClientRect.y);
-    console.log('** header minimial @ ' + Date.now().toString() + ' ** ');
+    //console.log(entries[0].boundingClientRect.y);
+    //console.log('** header minimial @ ' + Date.now().toString() + ' ** ');
   } else {
     document.body.classList.remove("header-not-at-top");
-    console.log('** header full @ ' + Date.now().toString() + ' ** ');
-    console.log(entries[0].boundingClientRect.y);
+    //console.log('** header full @ ' + Date.now().toString() + ' ** ');
+    //console.log(entries[0].boundingClientRect.y);
   }
 });
 observer.observe(document.querySelector("#topanchor"));
@@ -65,11 +65,15 @@ const animatedElements = document.querySelectorAll('.animate__animated');
 function handleIntersection(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
-      console.log('triggering animation for:');
-      console.log(entry.target);
-      console.log('animations:');
-      console.log(entry.target.dataset.animations);
-      entry.target.className += " " + entry.target.dataset.animations;
+      //console.log('triggering animation for:');
+      //console.log(entry.target);
+      if(entry.target.className.indexOf('hasFired') > -1) {
+          //console.log('already fired');
+      } else {
+        //console.log('animations:');
+        //console.log(entry.target.dataset.animations);
+        entry.target.className += " hasFired " + entry.target.dataset.animations;
+      }
     } else {
       //entry.target.classList.remove('visible')
       //no need to clean up - only animate once

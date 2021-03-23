@@ -24,7 +24,7 @@
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-
+  min-height: 50vw;
   background-image:url('{{ site.data.hero_image.hero_image }}');
   @include for-small {
     background-image:url('{{ site.data.hero_image.hero_image_mobile }}');
@@ -41,6 +41,8 @@
 
 // More to the Mix 
 .mm-bg {
+  position: relative;
+  padding-bottom: 5vw;
   @include for-small {
     background-image:url('{{ 'assets/home/moremixmobile.jpg' | relative_url }}');
   }
@@ -50,21 +52,55 @@
     background-image:url('{{ 'assets/home/moremix.jpg' | relative_url }}');
     background-size: 100% auto;
   }
-  
-}
-.mm-content {
-  @include for-small {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    padding-top: 40px;
-    padding-bottom: 20px;
+  .mm-content {
+    z-index: 2;
+    @include for-small {
+      grid-column-start: 2;
+      grid-column-end: 14;
+      padding-top: 40px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    @include for-med-up {
+      grid-column-start: 2;
+      grid-column-end: 8;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    
   }
-  @include for-med-up {
-    grid-column-start: 2;
-    grid-column-end: 8;
+  .mm-images {
+    z-index: 2;
+    @include for-small {
+      grid-column-start: 2;
+      grid-column-end: 14;
+    }
+    @include for-med-up {
+      grid-column-start: 8;
+      grid-column-end: 15;
+      //transform: translateY(-215px);
+      img {
+        transform: scale(1.3);
+      }
+    }
   }
-  
+  .guitar {
+    position: absolute;
+    width: 70vw;
+    left: 10vw;
+    top: 0;
+    mix-blend-mode: multiply;
+  }
 }
+.slide-holder.more {
+  margin-top: calc((100vw * 0.01354166667) - (5.6vw));
+  margin-bottom: 6vw;
+}
+.slidebar.more {
+  background-image:url('{{ 'assets/branding/bar_red.png' | relative_url }}');
+  right: 0;
+}
+
 // charm
 .charm-bg {
   @include for-small {
@@ -98,7 +134,7 @@
       @include for-med-up {
         position: absolute;
         top: -13vw;
-        left: -10vw;
+        left: -9vw;
         z-index: 1;
         width: 32vw;
       }  
@@ -136,6 +172,10 @@
     } 
   }
 }
+.slidebar.charm {
+  background-image:url('{{ 'assets/branding/bar_biz.png' | relative_url }}');
+  left: 14.286%;
+}
 
 // hats
 .hats-bg {
@@ -151,8 +191,24 @@
     margin-top: 215px;
   }
   background-repeat: no-repeat;
+  .bigword.live {
+    bottom: -60px;
+    left: 5%;
+    color: #304251;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    @include for-med-up {
+      font-size: 17rem;
+      opacity: .38;
+    }
+    @include for-small {
+      opacity: .4;
+      font-size: 8rem;
+    }
+  }
 }
 .hats-content {
+  z-index: 2;
   @include for-small {
     text-align: center;
     padding-bottom: 30px;
@@ -169,6 +225,7 @@
   }
 }
 .hats-images {
+  z-index: 2;
   @include for-small {
     grid-column-start: 1;
     grid-column-end: 15;
@@ -180,6 +237,10 @@
     grid-column-end: 15;
     transform: translateY(-215px);
   }
+}
+.slidebar.hats {
+  background-image:url('{{ 'assets/branding/bar_red.png' | relative_url }}');
+  right: 14.286%;
 }
 
 //amenities / life with benefits
@@ -197,13 +258,13 @@
   }
   position: relative;
   .bigword.enjoy {
-    bottom: 5vw;
+    bottom: -5rem;
     opacity: .1;
     z-index: -1;
     font-size: 12rem;
     @include for-med-up {
       font-size: 22rem;
-      right: -10vw;
+      right: -40vw;
     }
     @include for-small {
       left: 40vw;
@@ -242,6 +303,7 @@
 
 // businesses welcome
 .business-bg {
+  position: relative;
   @include for-small {
     background-image:url('{{ 'assets/home/businessmobile.jpg' | relative_url }}');
   }
@@ -252,8 +314,25 @@
     background-position: right 7vw top 0;
     background-repeat: no-repeat;
   }
+  .bigword.work {
+    color: #304251;
+    z-index: 1;
+    @include for-med-up {
+      font-size: 22rem;
+      opacity: .38;
+      bottom: -5rem;
+      left: -10vw;
+    }
+    @include for-small {
+      opacity: .4;
+      bottom: 0;
+      right: -10vw;
+      font-size: 8rem;
+    }
+  }
 }
 .business-content {
+  z-index: 2;
   @include for-small {
     grid-column-start: 2;
     grid-column-end: 14;
@@ -269,6 +348,7 @@
 .business-images {
   grid-column-start: 2;
   grid-column-end: 14;
+  z-index: 2;
   @include for-med-up {
     grid-column-start: 9;
     grid-column-end: 15;
@@ -383,13 +463,13 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   z-index: 1;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: multiply;
   @include for-med-up {
     font-size: 14rem;
     opacity: .38;
   }
   @include for-small {
-    opacity: .2;
+    opacity: .3;
     font-size: 8rem;
   }
 }
@@ -553,6 +633,7 @@
 //interest form
 .interest-bg {
   background-repeat: no-repeat;
+  position: relative;
   @include for-small {
     background-image:url('{{ 'assets/home/interestbg.jpg' | relative_url }}');
     padding-top: 50px;
@@ -565,10 +646,26 @@
     background-position: left 07.291666667vw top 0px; //140px offset @ 1920px wide = 140/1920 is ratio 
     background-size: cover;
   }
+  .bigword.join {
+    top: 40%;
+    left: 12%;
+    color: #304251;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    @include for-med-up {
+      font-size: 17rem;
+      opacity: .38;
+    }
+    @include for-small {
+      opacity: .4;
+      font-size: 8rem;
+    }
+  }
 }
 .interest-content {
   grid-column-start: 3;
   grid-column-end: 11;
+  z-index: 2;
   @include for-med-up {
     grid-column-start: 3;
     grid-column-end: 9;
@@ -578,6 +675,7 @@
   background-color: #881719;
   grid-column-start: 3;
   grid-column-end: 11;
+  z-index: 2;
   @include for-med-up {
     grid-column-start: 9;
     grid-column-end: 12;
