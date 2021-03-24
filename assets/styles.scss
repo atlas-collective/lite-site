@@ -151,6 +151,8 @@
     @include for-med-up {
       grid-column-start: 3;
       grid-column-end: 8;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
     .charm_map {
       @include for-med-up {

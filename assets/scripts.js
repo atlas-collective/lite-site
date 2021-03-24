@@ -1,46 +1,4 @@
-//METHOD 1
-
-// // The debounce function receives our function as a parameter
-// const debounce = (fn) => {
-
-//   // This holds the requestAnimationFrame reference, so we can cancel it if we wish
-//   let frame;
-
-//   // The debounce function returns a new function that can receive a variable number of arguments
-//   return (...params) => {
-    
-//     // If the frame variable has been defined, clear it now, and queue for next frame
-//     if (frame) { 
-//       cancelAnimationFrame(frame);
-//     }
-
-//     // Queue our function call for the next frame
-//     frame = requestAnimationFrame(() => {
-      
-//       // Call our function and pass any params we received
-//       fn(...params);
-//     });
-
-//   } 
-// };
-
-
-// // Reads out the scroll position and stores it in the data attribute
-// // so we can use it in our stylesheets
-// const storeScroll = () => {
-//   document.documentElement.dataset.scroll = window.scrollY;
-// }
-
-// // Listen for new scroll events, here we debounce our `storeScroll` function
-// document.addEventListener('scroll', debounce(storeScroll), { passive: true });
-
-// // Update scroll position for first time
-// storeScroll();
-
-
-
-// METHOD 2
-// header logo triggering
+// header logo switching trigger
 if (
   "IntersectionObserver" in window &&
   "IntersectionObserverEntry" in window &&
@@ -59,7 +17,7 @@ let observer = new IntersectionObserver(entries => {
 });
 observer.observe(document.querySelector("#topanchor"));
 }
-// animation triggering
+// animation triggering on all animated elements
 const animatedElements = document.querySelectorAll('.animate__animated');
 
 function handleIntersection(entries) {
@@ -85,10 +43,22 @@ const animObserver = new IntersectionObserver(handleIntersection);
 for (var i = animatedElements.length - 1; i >= 0; i--) {
   animObserver.observe(animatedElements[i]);
 }
-// begin lazy loading images
+// lazy loading images
 var lazyLoadInstance = new LazyLoad({
   // Your custom settings go here
   threshold: 500
 });
 
+
+// smooth scroll anchor links
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
