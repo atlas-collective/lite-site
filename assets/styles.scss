@@ -64,12 +64,13 @@
   padding-bottom: 5vw;
   @include for-small {
     background-image:url('{{ 'assets/home/moremixmobile.jpg' | relative_url }}');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   @include for-med-up {
     min-height: 67vw; 
-    height: 67vw;
     background-image:url('{{ 'assets/home/moremix.jpg' | relative_url }}');
-    background-size: 100% auto;
+    background-size: cover;
   }
   .mm-content {
     z-index: 2;
@@ -93,6 +94,7 @@
     @include for-small {
       grid-column-start: 2;
       grid-column-end: 14;
+      margin-top: -8.668vw;
     }
     @include for-med-up {
       grid-column-start: 8;
@@ -109,6 +111,10 @@
     left: 10vw;
     top: 0;
     mix-blend-mode: multiply;
+    @include for-small {
+      width: 100vw;
+      left: 3vw;
+    }
   }
 }
 .slide-holder.more {
@@ -313,11 +319,15 @@
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+    
     li {
       flex-basis: 33%;
+      color: #881719;
+      font-size: 19px;
       @include for-small {
         flex-basis: 50%;
         padding-right: 18px;
+        font-size: 15px;
       }
     }
   }
@@ -338,7 +348,6 @@
   }
   @include for-med-up {
     min-height: 57vw; 
-    height: 57vw;
     background-image:url('{{ 'assets/home/business.jpg' | relative_url }}');
     background-position: right 7vw top 0;
     background-repeat: no-repeat;
@@ -372,6 +381,8 @@
   @include for-med-up {
     grid-column-start: 3;
     grid-column-end: 8;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .business-images {
@@ -444,6 +455,8 @@
   @include for-med-up {
     grid-column-start: 8;
     grid-column-end: 14;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .destination-images {
@@ -531,12 +544,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     @include for-small {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
     }
     .who {
-      padding: 20px 20px 50px 20px;
       position: relative;
       @include for-med-up {
+        padding: 20px 20px 50px 20px;
         &:not(:last-of-type) {
             border-right-style: dotted;
             border-right-width: 5px;
@@ -544,7 +557,14 @@
       }
       @include for-small {
         text-align: center;
-        padding: 20px 10px 50px 10px;
+        padding: 20px 10px 30px 10px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        &:not(:first-of-type) {
+            border-top-style: dotted;
+            border-top-width: 5px;
+        }
       }
       .icon-space {
         min-height: 120px;
@@ -578,17 +598,17 @@
         color: #E5E3DD;
         letter-spacing: 1px;
         border-radius: 24px;
-        position: absolute;
-        bottom: 0;
         @include for-small {
-          left: 50%;
-          transform: translateX(-50%);
           font-size: 16px;
           padding: 5px 30px 3px 30px;
         }
         @include for-med-up {
           padding: 0px 30px 0px 30px;
           font-size: 24px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
@@ -621,15 +641,25 @@
     z-index: 1;
     transform: translateX(10px);
     position: relative;
+    @include for-small {
+      height: auto;
+      max-width: 60vw;
+      margin-top: 30px;
+    }
   }
   
   .bigword.neews {
-    opacity: .38;
-    top: -1.5rem;
-    left: 30vw;
-    font-size: 12rem;
+    opacity: .3;
     @include for-med-up {
       font-size: 22rem;
+      left: 30vw;
+      top: -1.5rem;
+    }
+    @include for-small {
+      font-size: 8rem;
+      width: 100%;
+      left: 0;
+      top: 1rem;
     }
   }
   .news-list {
@@ -715,7 +745,7 @@
   @include for-med-up {
     grid-column-start: 9;
     grid-column-end: 12;
-    margin-left: 50px;
+    margin-left: 30px;
   }
   .mc-wrap {
     label {
