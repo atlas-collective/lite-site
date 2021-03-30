@@ -116,11 +116,24 @@
       left: 3vw;
     }
   }
+  .coffee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+  }
+  .shopping {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+  }
 }
 .slide-holder.more {
   @include for-med-up {
     margin-top: calc((100vw * 0.01354166667) - (5.6vw));
-    margin-bottom: 6vw;
+    margin-bottom: 9vw;
   }
  
 }
@@ -136,8 +149,9 @@
   }
   @include for-med-up {
     background-image:url('{{ 'assets/home/charm.jpg' | relative_url }}');
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-position-x: 7vw;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   .charm-content {
@@ -239,6 +253,18 @@
       opacity: .4;
       font-size: 8rem;
       bottom: 70vw;
+      left: 15%;
+    }
+  }
+  .cogs {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    opacity: .6;
+    @include for-small {
+      height: 220px;
+      width: auto;
+      top: 0;
     }
   }
 }

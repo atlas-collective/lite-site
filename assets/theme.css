@@ -104,3 +104,37 @@ strong {
 	justify-content: center;
 	height: 100%;
 }
+
+
+
+
+
+
+/* TEST */
+body.bgs-fixed .sized_section.vcen.mm-bg {
+    background-attachment: fixed;
+}
+
+body.bgs-fixed .sized_section.charm-bg {
+    background-attachment: fixed;
+}
+
+body.bgs-fixed .sized_section.vcen.hats-bg {
+    background-attachment: fixed;
+}
+
+body.bgs-fixed .sized_section.business-bg.vcen {
+    background-attachment: fixed;
+}
+
+body.bgs-fixed .destination-bg {
+    background-attachment: fixed;
+}
+
+body.bgs-fixed .news {
+    background-attachment: fixed;
+}
+
+body.bgs-fixed  div#interest_form {
+    background-attachment: fixed;
+}
