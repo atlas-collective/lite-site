@@ -5,14 +5,21 @@ body {
 .home {
 	overflow-x: hidden;
 }
+.container {
+    min-height: 400px;
+}
 * {
     box-sizing: border-box;
 }
 h2 {
 	font-family: Neuzon;
 }
+h1,h3 {
+	font-family: Neuzon, sans-serif;
+}
 p {
 	white-space: break-spaces;
+	font-family: forma-djr-micro, sans-serif;
 }
 strong {
 	/*text-shadow: 0 0 #304251;*/
