@@ -68,7 +68,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             document.querySelector(target).scrollIntoView({
                 behavior: 'smooth'
             });
-          }, 500);
+          }, 1000);
         }
 
         
