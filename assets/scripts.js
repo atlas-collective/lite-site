@@ -56,13 +56,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
+        var target = this.getAttribute('href');
+        //console.log(this);
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
 
         if (this.getAttribute('href') == '#interest_form') {
           setTimeout(function(){ 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            document.querySelector(target).scrollIntoView({
                 behavior: 'smooth'
             });
           }, 500);
