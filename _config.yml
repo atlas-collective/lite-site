@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Brick & Mortar District at Plum Creek
-email: your-email@example.com
+title: "| Dine Work Live"
+email: june@momarkdevelopment.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The Brick & Mortar District at Plum Creek is a new mixed use development in Kyle, Texas
+  Welcome to the Brick and Mortar District - A planned live, work, and play community located in the heart of Kyle, TX, and just a 25-minute drive to Downtown Austin. Join us in Fall 2021.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 
+github_username:  
 
 # Build settings
 theme: minima
