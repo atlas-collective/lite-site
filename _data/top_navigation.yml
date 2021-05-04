@@ -1,7 +1,7 @@
 ctatext: Join Interest List
 ctalink: "#interest_form"
 top_navigation:
-  - name: Commercial Development Opportunities
-    link: /commercial
-  - name: Residential Living Opportunities
-    link: /residential
+  - name: Fact Sheet
+    link: /assets/TheBrickAndMortarFactSheet.pdf
+  - name: Site Map
+    link: /assets/TheBrickAndMortarFactSheet.pdf
