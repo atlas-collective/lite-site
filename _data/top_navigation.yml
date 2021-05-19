@@ -3,5 +3,5 @@ ctalink: "#interest_form"
 top_navigation:
   - name: Fact Sheet
     link: /assets/TheBrickAndMortarFactSheet.pdf
-  - name: Site Map
+  - name: Project Map
     link: /assets/TheBrickAndMortarSiteMap.pdf
