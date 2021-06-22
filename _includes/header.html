@@ -33,11 +33,11 @@
 </header>
 
 
-{% comment %}
-Default jekyll auto nav
+
+<div class="mobile-dropdowns">
+
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
-<a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
 {%- if page_paths -%}
   <nav class="site-nav">
@@ -51,13 +51,19 @@ Default jekyll auto nav
     </label>
 
     <div class="trigger">
+      {% for item in site.data.top_navigation.top_navigation %}
+        <a class="ff-akro fup page-link" target="_blank" href="{{ item.link }}">{{ item.name }}</a>
+      {% endfor %}
+      {% comment %}
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title -%}
         <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
         {%- endif -%}
       {%- endfor -%}
+      {% endcomment %}
+
     </div>
   </nav>
 {%- endif -%}
-{% endcomment %}
+</div>
